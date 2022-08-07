@@ -5,24 +5,27 @@
 <body>
   <h1 style="color: red">Welcome to our ranks!</h1>
   <form method="post">
-    <br /><input
+    {% csrf_token %} <br /><input
       id="1"
       type="text"
       placeholder="Name"
       name="name"
+      required
     /><br /><br /><input
       id="2"
       type="text"
       placeholder="Username"
       name="username"
+      required
     /><br /><br />
-    <input id="3" type="email" placeholder="Email" name="email" />
+    <input id="3" type="email" placeholder="Email" name="email" required />
     <br /><br />
     <input
       id="4"
       type="password"
       placeholder="Password"
       name="password"
+      required
     /><br /><br />
     <input type="submit" value="Register" />
     <br /><br />
