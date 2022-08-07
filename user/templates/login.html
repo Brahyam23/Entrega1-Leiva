@@ -1,3 +1,21 @@
 {% extends 'index/layout.html' %} {% block content %}
-<p>Ingrese usuario</p>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1 style="color: red">Welcome back!</h1>
+  <form method="post">
+    <br />
+    <input id="1" type="email" placeholder="Email" name="email" />
+    <br /><br />
+    <input
+      id="2"
+      type="password"
+      placeholder="Password"
+      name="password"
+    /><br /><br />
+    <input type="submit" value="Log in" />
+    <br /><br />
+  </form>
+</body>
 {% endblock content %}

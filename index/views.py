@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Notice
 
 
 def index(request):
-    return render(request, 'index/index.html')
+    notice = Notice.objects.all()
+    return render(request, 'index/index.html', {'notices': notice})
