@@ -1,6 +1,7 @@
 from urllib import request
 from django.db import models
 from django.utils import timezone
+import datetime
 
 
 class User(models.Model):

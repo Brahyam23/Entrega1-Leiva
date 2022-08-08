@@ -3,10 +3,11 @@
   <title>Login</title>
 </head>
 <body>
-  <h1 style="color: red">Welcome !</h1>
+  <h1 style="color: red">Welcome back !</h1>
   <form method="post">
+    {% csrf_token %}
     <br />
-    <input id="1" type="email" placeholder="Email" name="email" required />
+    <input id="1" type="text" placeholder="Username" name="username" required />
     <br /><br />
     <input
       id="2"
@@ -15,7 +16,13 @@
       name="password"
       required
     /><br /><br />
+    {{form.errors}}
+    <a href="#">Forgot your password?</a>
+    <br /><br />
     <input type="submit" value="Log in" />
+    <br /><br />
+    <p>Don't have an account?</p>
+    <a href="{% url 'register' %}">Register now!</a>
     <br /><br />
   </form>
 </body>

@@ -73,7 +73,8 @@
       </div>
       <br />
       <div>
-        <h2>Brand News</h2>
+        <u><h2>Brand News</h2></u>
+        <br /><br />
         {%for notice in notices %}
         <div class="col-md-4 p-4">
           <div class="card bg-black card-project">
@@ -85,6 +86,7 @@
             />
             <div class="card-body">
               <h2>{{notice.title}}</h2>
+              <br />
               <p>{{notice.description}}</p>
               {% if notice.url %}
               <a

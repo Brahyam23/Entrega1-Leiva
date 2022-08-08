@@ -20,5 +20,5 @@ def new_user(request):
         return render(request, "user/login.html")
 
 
-def login(request):
-    return render(request, 'user/login.html')
+# def login(request):
+#     return render(request, 'user/login.html')

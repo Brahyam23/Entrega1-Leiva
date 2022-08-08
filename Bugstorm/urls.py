@@ -22,12 +22,13 @@ from django.conf import settings
 from index.views import *
 from user.views import *
 from gallery.views import *
+from django.contrib.auth.views import LoginView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('login/', login, name='login'),
+    path('login/', LoginView.as_view(template_name='user/login.html'), name='login'),
     path('register/', new_user, name='register'),
     path('gallery/', new_image, name='new_image'),
     path('forum/', include('forum.urls'))
