@@ -21,4 +21,5 @@ def new_user(request):
 
 
 # def login(request):
+#     formulary = request.POST
 #     return render(request, 'user/login.html')
